@@ -14,3 +14,5 @@ function ..
   done
 }
 
+alias git_delete_tags="git tag -l | xargs git tag -d"
+
