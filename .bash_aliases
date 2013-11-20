@@ -36,3 +36,5 @@ function pull
   git_sync pull $1
 }
 
+alias git_delete_tags="git tag -l | xargs git tag -d"
+

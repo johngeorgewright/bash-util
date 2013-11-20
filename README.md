@@ -32,3 +32,8 @@ Sick of doing this: `cd ../../../`?
 
 Now you can type `..` to change up 1 directory or `.. 3` to change up 3.
 
+### Deleting all your local git tags
+
+`git_delete_tags` is an alias of `git tag -l | xargs git tag -d` which will
+delete all your local git tags.
+
