@@ -14,7 +14,7 @@ function ..
   done
 }
 
-function git_sync
+function gsync
 {
   action=$1
   remote=origin
@@ -26,15 +26,19 @@ function git_sync
   git $action $remote $branch
 }
 
-function push
+function gpush
 {
-  git_sync push $1
+  gsync push $1
 }
 
-function pull
+function gpull
 {
-  git_sync pull $1
+  gsync pull $1
 }
 
-alias git_delete_tags="git tag -l | xargs git tag -d"
+alias g="git"
+alias gadd="git add -A"
+alias gcommit="git commit"
+alias gdeltags="git tag -l | xargs git tag -d"
+alias gstatus="git status"
 

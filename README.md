@@ -32,16 +32,12 @@ Sick of doing this: `cd ../../../`?
 
 Now you can type `..` to change up 1 directory or `.. 3` to change up 3.
 
-### Deleting all your local git tags
+### Git
 
-`git_delete_tags` is an alias of `git tag -l | xargs git tag -d` which will
-delete all your local git tags.
-
-### Push the current git branch
-
-`push` checks the current branch you're working on and then pushes it to `origin`. If you want to override the remote, add it as the 1st parameter: `push production`.
-
-### Pull the current git branch
-
-`pull` checks the current branch you're working on and then pulls the same from `origin`. If you want to override the remote, add it as the 1st parameter: `pull production`.
+- `g` is aliased to `git`
+- `gadd` is aliased to `git add -A`
+- `gcommit` is aliased to `git commit`
+- `gdeltags` is aliased to `git tag -l | xargs git tag -d`
+- `gpush` will push the current working branch to a given remote (origin by default)
+- `gpull` will pull down the current branch from a given remote (origin by default)
 
