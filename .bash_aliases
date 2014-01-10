@@ -36,6 +36,7 @@ function gpull
   gsync pull $1
 }
 
+alias be="bundle exec"
 alias g="git"
 alias gadd="git add -A"
 alias gcommit="git commit"
