@@ -1,3 +1,16 @@
+function swap
+{
+  if [ $# -ne 2 ]
+  then
+    echo "Usage: swap file1 file2"
+  else
+    local TMPFILE=$(mktemp)
+    mv "$1" $TMPFILE
+    mv "$2" "$1"
+    mv $TMPFILE "$2"
+  fi
+}
+
 function ..
 {
   if [ "$1" ]
@@ -41,5 +54,5 @@ alias g="git"
 alias gadd="git add -A"
 alias gcommit="git commit"
 alias gdeltags="git tag -l | xargs git tag -d"
-alias gstatus="git status"
+alias gstatus="git status -sb"
 
