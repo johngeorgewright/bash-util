@@ -67,4 +67,6 @@ alias gcommit="git commit"
 alias gdeltags="git tag -l | xargs git tag -d"
 alias gstatus="git status -sb"
 alias glog="git log --all --graph --decorate --oneline --abbrev-commit"
+alias ccat="pygmentize -g"
+alias lcat="pygmentize -g -O style=colorful,linenos=1"
 
