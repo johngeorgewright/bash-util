@@ -46,6 +46,7 @@ gpush()
 
 gpull()
 {
+  g fetch
   gsync pull $1
 }
 
