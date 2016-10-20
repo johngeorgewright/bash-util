@@ -4,9 +4,13 @@ swap()
   then
     echo "Usage: swap file1 file2"
   else
+    echo "local TMPfiLE=\$(mktemp $0.XXXXXXXXXX))"
     local TMPFILE=$(mktemp $0.XXXXXXXXXX)
+    echo "mv $1 $TMPFILE"
     mv "$1" $TMPFILE
+    echo "mv $2 $1"
     mv "$2" "$1"
+    echo "mv $TMPFILE $2"
     mv $TMPFILE "$2"
   fi
 }
@@ -46,7 +50,7 @@ gpush()
 
 gpull()
 {
-  g fetch
+  git fetch
   gsync pull $1
 }
 
