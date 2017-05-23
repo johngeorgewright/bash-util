@@ -29,6 +29,8 @@ swap()
     cd ..
     let "num=$num-1"
   done
+
+  return 0
 }
 
 gsync()
