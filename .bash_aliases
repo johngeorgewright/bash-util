@@ -56,6 +56,11 @@ gpull()
   gsync pull $1
 }
 
+gco()
+{
+  BRANCH=$(git branch | grep $1)
+  git checkout $BRANCH
+}
 vtag()
 {
   type=$1
