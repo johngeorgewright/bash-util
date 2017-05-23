@@ -61,6 +61,14 @@ gco()
   BRANCH=$(git branch | grep $1)
   git checkout $BRANCH
 }
+
+gbr()
+{
+    for k in $(git branch -a|grep -v "\->"|sed s/^..//)
+        do echo -e $(git log -1 --pretty=format:"%Cgreen%ci %Cred%cr%Creset" "$k")\\t"$k"
+    done|sort|less -R
+}
+
 vtag()
 {
   type=$1
