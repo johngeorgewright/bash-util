@@ -89,4 +89,5 @@ alias gstatus="git status -sb"
 alias glog="git log --all --graph --decorate --oneline --abbrev-commit"
 alias ccat="pygmentize -g"
 alias lcat="pygmentize -g -O style=colorful,linenos=1"
+alias npm-scripts="cat package.json | jq .scripts"
 
