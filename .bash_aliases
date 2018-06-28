@@ -80,6 +80,13 @@ vtag()
   fi
 }
 
+ghgif() 
+{
+  BASENAME=`basename $1 .mov`
+  GIF=$BASENAME.gif
+  ffmpeg -i $1 -pix_fmt rgb24 -r 3 $GIF
+}
+
 alias be="bundle exec"
 alias g="git"
 alias gadd="git add -A"
@@ -89,5 +96,9 @@ alias gstatus="git status -sb"
 alias glog="git log --all --graph --decorate --oneline --abbrev-commit"
 alias ccat="pygmentize -g"
 alias lcat="pygmentize -g -O style=colorful,linenos=1"
+alias la="ls -a"
+alias ll="ls -la"
 alias npm-scripts="cat package.json | jq .scripts"
 
+export LSCOLORS=ExFxBxDxCxegedabagacad
+export CLICOLOR=1
